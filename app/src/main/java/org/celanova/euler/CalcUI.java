@@ -4,19 +4,46 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
-public class CalcUI extends Activity {
-
+public class CalcUI extends Activity
+{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calc_ui);
 
-        System.out.println(findViewById(R.id.num1));
-        Button b = (Button) findViewById(R.id.num1);
+        CalcIO.setOutputBoxes((TextView) findViewById(R.id.output),
+                              (TextView) findViewById(R.id.lastEquation));
 
+        createCalcButtonListener(R.id.num0);  //disgusting massive block to create listeners
+        createCalcButtonListener(R.id.num1);  //for all of the basic calc buttons
+        createCalcButtonListener(R.id.num2);
+        createCalcButtonListener(R.id.num3);
+        createCalcButtonListener(R.id.num4);
+        createCalcButtonListener(R.id.num5);
+        createCalcButtonListener(R.id.num6);
+        createCalcButtonListener(R.id.num7);
+        createCalcButtonListener(R.id.num8);
+        createCalcButtonListener(R.id.num9);
+        createCalcButtonListener(R.id.plus);
+        createCalcButtonListener(R.id.minus);
+        createCalcButtonListener(R.id.multiply);
+        createCalcButtonListener(R.id.divide);
+    }
+
+    public void equalsPressed(View view)
+    {
+        CalcIO.submit();
+    }
+
+    private CalcButtonListener createCalcButtonListener(int id)
+    {
+        return new CalcButtonListener((Button) findViewById(id));
     }
 
 

@@ -18,14 +18,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:text="4+7= " />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="11"
         android:id="@+id/output"
         android:layout_below="@+id/lastEquation"
         android:layout_alignParentLeft="true"
@@ -192,7 +190,8 @@
                 android:layout_height="wrap_content"
                 android:text="="
                 android:id="@+id/equals"
-                android:layout_weight="0.33" />
+                android:layout_weight="0.33"
+                android:onClick="equalsPressed" />
 
         </LinearLayout>
 
