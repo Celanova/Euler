@@ -34,6 +34,8 @@ public class CalcUI extends Activity
         createCalcButtonListener(R.id.minus);
         createCalcButtonListener(R.id.multiply);
         createCalcButtonListener(R.id.divide);
+
+        UnitConverter.run(); //temporary
     }
 
     public void equalsPressed(View view)
