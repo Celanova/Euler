@@ -4,5 +4,6 @@
     <string name="app_name">Euler</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <color name="blue">#dafef8</color>
 
 </resources>
