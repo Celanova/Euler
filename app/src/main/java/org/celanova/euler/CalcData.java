@@ -10,7 +10,7 @@ public class CalcData
     private String contents;
     private int type;
 
-    public static final int NUM = 0, OP = 1, VAR = 2;
+    public static final int NUM = 0, OP = 1, VAR = 2, FUNC = 3, PAR = 4, CMD = 5;
 
     public CalcData(String contents, int type)
     {

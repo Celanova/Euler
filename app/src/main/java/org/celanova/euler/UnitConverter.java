@@ -5,7 +5,7 @@ package org.celanova.euler;
  */
 public class UnitConverter
 {
-    public static void run()
+    public static void main(String[] args)
     {
         //this will run when the app starts
     }

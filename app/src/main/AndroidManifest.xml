@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ProgramUI"
+            android:label="@string/title_activity_program_ui" >
+        </activity>
+        <activity
+            android:name=".GraphUI"
+            android:label="@string/title_activity_graph_ui" >
+        </activity>
     </application>
 
 </manifest>

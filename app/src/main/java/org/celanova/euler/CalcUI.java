@@ -1,6 +1,7 @@
 package org.celanova.euler;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,7 +45,8 @@ public class CalcUI extends Activity
         createCalcButtonListener(R.id.multiply);
         createCalcButtonListener(R.id.divide);
 
-        UnitConverter.run(); //temporary
+        //Intent intent = new Intent(this, ProgramUI.class);
+        //startActivity(intent);
     }
 
     public void equalsPressed(View view)
