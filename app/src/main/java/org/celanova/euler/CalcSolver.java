@@ -19,8 +19,9 @@ public class CalcSolver
         {
             //goes through every piece of data and gets the contents/type
             //like going through a while loop and continuously asking for user input
-            String contents = data.getContents();
-            int type = data.getType();
+            String contents = data.contents;
+            int type = data.type;
+            if(type == 0)
         }
 
         return result; //this sends the result back to the interface to be displayed
