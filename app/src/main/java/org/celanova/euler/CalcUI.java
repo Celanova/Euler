@@ -1,6 +1,7 @@
 package org.celanova.euler;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +16,15 @@ public class CalcUI extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        //Remove title bar
+        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //Remove notification bar
+        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        //set content view AFTER ABOVE sequence (to avoid crash)
+        //this.setContentView(R.layout.your_layout_name_here);
+
         setContentView(R.layout.activity_calc_ui);
 
         CalcIO.setOutputBoxes((TextView) findViewById(R.id.output),
@@ -35,7 +45,8 @@ public class CalcUI extends Activity
         createCalcButtonListener(R.id.multiply);
         createCalcButtonListener(R.id.divide);
 
-        UnitConverter.run(); //temporary
+        //Intent intent = new Intent(this, ProgramUI.class);
+        //startActivity(intent);
     }
 
     public void equalsPressed(View view)

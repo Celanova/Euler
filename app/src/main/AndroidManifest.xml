@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.NoTitleBar" >
         <activity
             android:name=".CalcUI"
             android:label="@string/app_name" >
@@ -15,6 +15,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProgramUI"
+            android:label="@string/title_activity_program_ui" >
+        </activity>
+        <activity
+            android:name=".GraphUI"
+            android:label="@string/title_activity_graph_ui" >
         </activity>
     </application>
 
