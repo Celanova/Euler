@@ -7,9 +7,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".CalcUI"
-    android:background="@color/blue"
     android:id="@+id/mainLayout"
-    android:longClickable="false">
+    android:longClickable="false"
+    >
 
 
     <TextView
@@ -41,40 +41,51 @@
         android:id="@+id/"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:weightSum="1"
+        >
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_weight="0.06">
 
             <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/ToolBar"
                 android:text="+"
-                android:id="@+id/plus" />
+                android:id="@+id/plus"
+                android:layout_width="90.33dp"
+                android:layout_height="82.00dp"
+                android:layout_weight="0.11"
+                />
+
 
             <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/ToolBar"
                 android:text="-"
-                android:id="@+id/minus" />
+                android:layout_width="90.33dp"
+                android:layout_height="82.00dp"
+                android:id="@+id/minus"
+                />
 
             <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/ToolBar"
+                android:layout_width="90.33dp"
+                android:layout_height="82.00dp"
                 android:text="*"
-                android:id="@+id/multiply" />
+                android:id="@+id/multiply"
+                />
 
             <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/ToolBar"
+                android:layout_width="90.33dp"
+                android:layout_height="82.00dp"
                 android:text="/"
-                android:id="@+id/divide" />
+                android:id="@+id/divide"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -86,7 +97,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="7"
                 android:id="@+id/num7"
                 android:layout_weight="0.09" />
@@ -94,7 +105,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="8"
                 android:id="@+id/num8"
                 android:layout_weight="0.09" />
@@ -102,7 +113,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="9"
                 android:id="@+id/num9"
                 android:layout_weight="0.09" />
@@ -118,7 +129,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="4"
                 android:id="@+id/num4"
                 android:layout_weight="0.09" />
@@ -126,15 +137,16 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="5"
                 android:id="@+id/num5"
-                android:layout_weight="0.09" />
+                android:layout_weight="0.09"
+                android:layout_gravity="center_vertical" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="6"
                 android:id="@+id/num6"
                 android:layout_weight="0.09" />
@@ -150,7 +162,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="1"
                 android:id="@+id/num1"
                 android:layout_weight="0.09" />
@@ -158,7 +170,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="2"
                 android:id="@+id/num2"
                 android:layout_weight="0.09" />
@@ -166,7 +178,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="3"
                 android:id="@+id/num3"
                 android:layout_weight="0.09" />
@@ -182,7 +194,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="0"
                 android:id="@+id/num0"
                 android:layout_weight="0.09" />
@@ -190,7 +202,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="."
                 android:id="@+id/equals"
                 android:layout_weight="0.08"
@@ -199,7 +211,7 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="="
                 android:id="@+id/button"
                 android:layout_weight="0.09" />
